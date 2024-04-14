@@ -1,0 +1,45 @@
+@import "../../assets/colors.scss";
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 2rem;
+
+  select,
+  input {
+    border: solid 1px $primary;
+    border-radius: 4px;
+    height: 36px;
+    font-size: 14px;
+    padding: 0 4px;
+  }
+
+  button {
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    height: 36px;
+    padding: 8px;
+    font-size: 14px;
+    background-color: $secondary-light;
+    color: $primary;
+
+    &:hover {
+      background-color: $primary;
+      color: white;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 2rem;
+    margin-bottom: 0;
+
+    select,
+    input {
+      width: 100%;
+    }
+  }
+}
