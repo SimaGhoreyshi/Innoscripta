@@ -1,0 +1,19 @@
+@import "../../assets/colors.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 4.5rem;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: $secondary-light;
+
+  svg {
+    max-width: 100vw;
+    max-height: 50px;
+    margin: 0 auto;
+  }
+}
