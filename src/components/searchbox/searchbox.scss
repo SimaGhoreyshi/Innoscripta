@@ -1,0 +1,43 @@
+@import "../../assets/colors.scss";
+
+.searchbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 44px;
+  border: solid 1px $primary;
+  border-radius: 4px;
+  padding: 4px;
+  height: fit-content;
+
+  .searchbox-input {
+    height: 32px;
+    width: 320px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 14px;
+  }
+
+  .searchbox-button {
+    background-color: $secondary-light;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    place-items: center;
+    padding: 4px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+}
