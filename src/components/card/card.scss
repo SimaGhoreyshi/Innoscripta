@@ -1,0 +1,97 @@
+@import "../../assets/colors.scss";
+
+.card-container {
+  display: grid;
+  background-size: cover;
+
+  background-position: center;
+  grid-template-areas:
+    "category source"
+    "title-url title-url"
+    "authors authors";
+  grid-template-rows: auto 20% 10%;
+  width: max(320px, 32%);
+  height: 300px;
+
+  p {
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+    margin: 10px;
+  }
+  .card-source {
+    grid-area: source;
+    justify-self: end;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    filter: drop-shadow(0 0 5px black);
+
+    &:hover {
+      cursor: pointer;
+      color: rgb(108, 194, 228);
+    }
+  }
+
+  .card-category {
+    grid-area: category;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    filter: drop-shadow(0 0 5px black);
+
+    &:hover {
+      cursor: pointer;
+      color: $secondary;
+    }
+  }
+
+  .card-url {
+    grid-area: title-url;
+    text-decoration: none;
+    color: white;
+    align-self: end;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .card-title {
+      width: 100%;
+      text-align: center;
+      align-self: end;
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+      align-self: center;
+      padding: 0;
+      margin: 0;
+      background-color: rgba(15, 58, 80, 0.4);
+      text-decoration: none;
+    }
+  }
+
+  .card-authors {
+    grid-area: authors;
+    justify-self: end;
+
+    .author-name {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: $secondary;
+      font-size: 16px;
+      font-weight: 600;
+
+      &:hover {
+        cursor: pointer;
+        color: $secondary-light;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
