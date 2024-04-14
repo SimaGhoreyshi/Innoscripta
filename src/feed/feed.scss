@@ -1,0 +1,20 @@
+.feed {
+  max-width: 80vw;
+  margin: 4.5rem auto;
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 95vw;
+
+    .cards {
+      flex-direction: column;
+    }
+  }
+}

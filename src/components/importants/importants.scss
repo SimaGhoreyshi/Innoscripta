@@ -1,0 +1,54 @@
+@import "../../assets/colors.scss";
+
+.importants {
+  margin-bottom: 32px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-auto-rows: 1fr 1fr;
+  grid-template-areas:
+    "first other1"
+    "first other2";
+  height: 450px;
+  gap: 10px;
+
+  .first {
+    grid-area: first;
+    & > div {
+      width: 50%;
+      height: 50%;
+      transform: scale(2) translate(25%, 25%);
+    }
+  }
+  .other1 {
+    grid-area: other1;
+    & > div {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .other2 {
+    grid-area: other2;
+    & > div {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    row-gap: 2rem;
+    margin: 2rem 0;
+    .first,
+    .other1,
+    .other2 {
+      & > div {
+        transform: unset;
+
+        width: 100%;
+        height: 300px;
+      }
+    }
+  }
+}
