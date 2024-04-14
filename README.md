@@ -1,5 +1,5 @@
 # Innoscripta Test Assignment
-This project is create with React JS.
+This project is created with React JS as a small test assignment for Innoscripta.
 
 ## Available Scripts
 
