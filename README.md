@@ -16,7 +16,9 @@ Launches the test runner in the interactive watch mode.
 
 Builds the app for production to the `build` folder.
 
-### `npm run eject`
+### `docker build . -t <package_name>
+### and
+### docker run  -p <port>:80 <package_name>`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Builds and runs the project using Docker.
 
