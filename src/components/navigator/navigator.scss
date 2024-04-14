@@ -1,0 +1,56 @@
+@import "../../assets/colors.scss";
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .navigator {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    padding: 0;
+    height: 32px;
+    padding-top: 2rem;
+
+    li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin-right: 1rem;
+
+      &.selected p {
+        display: block;
+        background: $primary;
+        color: white;
+
+        &:hover {
+          background: $primary;
+        }
+      }
+
+      p {
+        border-radius: 4px;
+        padding: 4px 8px;
+        margin: 0;
+        margin-left: 5px;
+        font-weight: 600;
+
+        &:hover {
+          background-color: $secondary;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 2rem;
+    flex-direction: column;
+  }
+}
